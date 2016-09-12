@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Nfl Byes</h1>
+
+<%= link_to "Import NFL Byes", nfl_byes_import_path %>
+
+<table class="ui selectable inverted table">
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>Bye week</th>
+      <th>Display name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nfl_byes.each do |nfl_bye| %>
+      <tr>
+        <td><%= nfl_bye.team %></td>
+        <td><%= nfl_bye.bye_week %></td>
+        <td><%= nfl_bye.display_name %></td>
+        <td><%= link_to 'Show', nfl_bye %></td>
+        <td><%= link_to 'Edit', edit_nfl_bye_path(nfl_bye) %></td>
+        <td><%= link_to 'Destroy', nfl_bye, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nfl Bye', new_nfl_bye_path %>

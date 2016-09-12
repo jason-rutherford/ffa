@@ -1,0 +1,1 @@
+json.array! @nfl_teams, partial: 'nfl_teams/nfl_team', as: :nfl_team

@@ -1,0 +1,2 @@
+module NflTeamsHelper
+end

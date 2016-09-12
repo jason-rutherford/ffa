@@ -1,0 +1,46 @@
+<div class="ui container">
+
+  <p id="notice"><%= notice %></p>
+
+  <h1 class="ui header">Schedule</h1>
+
+  <div class="ui inverted divider"></div>
+
+  <button class="ui primary basic button">
+    <%= link_to "Import Schedule", nfl_schedules_import_path, class: "ui link" %>
+  </button>
+
+  <table class="ui selectable inverted table">
+    <thead>
+      <tr>
+        <th>Game week</th>
+        <th>Game date</th>
+        <th>Away team</th>
+        <th>Home team</th>
+        <th>Game time et</th>
+        <th>Tv station</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @nfl_schedules.each do |nfl_schedule| %>
+        <tr>
+          <td><%= nfl_schedule.game_week %></td>
+          <td><%= nfl_schedule.game_date %></td>
+          <td><%= nfl_schedule.away_team %></td>
+          <td><%= nfl_schedule.home_team %></td>
+          <td><%= nfl_schedule.game_time_et %></td>
+          <td><%= nfl_schedule.tv_station %></td>
+          <td><%= link_to 'Show', nfl_schedule %></td>
+          <td><%= link_to 'Edit', edit_nfl_schedule_path(nfl_schedule) %></td>
+          <td><%= link_to 'Destroy', nfl_schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Nfl Schedule', new_nfl_schedule_path %>
+</div>

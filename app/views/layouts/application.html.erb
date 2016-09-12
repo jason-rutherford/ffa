@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ffn</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body id="example">
+    <div class="ui fixed inverted menu">
+      <div class="ui container">
+        <a href="#" class="header item">
+          NFL
+        </a>
+        <%= link_to "Teams", nfl_teams_path, class: 'item' %>
+        <%= link_to "Byes", nfl_byes_path, class: 'item' %>
+        <%= link_to "Schedule", nfl_schedules_path, class: 'item' %>
+        <%= link_to "Weather", nfl_weathers_path, class: 'item' %>
+        <%= link_to "Players", nfl_players_path, class: 'item' %>
+      </div>
+    </div>
+
+  <div class="ui masthead vertical segment">
+    <div class="ui container">
+      <%= yield %>
+    </div>
+  </div>
+  
+
+    
+  </body>
+</html>

@@ -1,0 +1,2 @@
+class NflWeather < ApplicationRecord
+end

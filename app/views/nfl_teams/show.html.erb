@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @nfl_team.code %>
+</p>
+
+<p>
+  <strong>Full name:</strong>
+  <%= @nfl_team.full_name %>
+</p>
+
+<p>
+  <strong>Short name:</strong>
+  <%= @nfl_team.short_name %>
+</p>
+
+<%= link_to 'Edit', edit_nfl_team_path(@nfl_team) %> |
+<%= link_to 'Back', nfl_teams_path %>

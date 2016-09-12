@@ -1,0 +1,102 @@
+<%= form_for(nfl_weather) do |f| %>
+  <% if nfl_weather.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(nfl_weather.errors.count, "error") %> prohibited this nfl_weather from being saved:</h2>
+
+      <ul>
+      <% nfl_weather.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :game_week %>
+    <%= f.number_field :game_week %>
+  </div>
+
+  <div class="field">
+    <%= f.label :game_date %>
+    <%= f.date_select :game_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :home_team %>
+    <%= f.text_field :home_team %>
+  </div>
+
+  <div class="field">
+    <%= f.label :away_team %>
+    <%= f.text_field :away_team %>
+  </div>
+
+  <div class="field">
+    <%= f.label :stadium %>
+    <%= f.text_field :stadium %>
+  </div>
+
+  <div class="field">
+    <%= f.label :is_dome %>
+    <%= f.text_field :is_dome %>
+  </div>
+
+  <div class="field">
+    <%= f.label :geo_lat %>
+    <%= f.text_field :geo_lat %>
+  </div>
+
+  <div class="field">
+    <%= f.label :geo_long %>
+    <%= f.text_field :geo_long %>
+  </div>
+
+  <div class="field">
+    <%= f.label :low %>
+    <%= f.text_field :low %>
+  </div>
+
+  <div class="field">
+    <%= f.label :high %>
+    <%= f.text_field :high %>
+  </div>
+
+  <div class="field">
+    <%= f.label :forcast %>
+    <%= f.text_field :forcast %>
+  </div>
+
+  <div class="field">
+    <%= f.label :wind_chill %>
+    <%= f.text_field :wind_chill %>
+  </div>
+
+  <div class="field">
+    <%= f.label :wind_speed %>
+    <%= f.text_field :wind_speed %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dome_img %>
+    <%= f.text_field :dome_img %>
+  </div>
+
+  <div class="field">
+    <%= f.label :small_img %>
+    <%= f.text_field :small_img %>
+  </div>
+
+  <div class="field">
+    <%= f.label :medium_img %>
+    <%= f.text_field :medium_img %>
+  </div>
+
+  <div class="field">
+    <%= f.label :large_img %>
+    <%= f.text_field :large_img %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

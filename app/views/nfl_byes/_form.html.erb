@@ -1,0 +1,32 @@
+<%= form_for(nfl_bye) do |f| %>
+  <% if nfl_bye.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(nfl_bye.errors.count, "error") %> prohibited this nfl_bye from being saved:</h2>
+
+      <ul>
+      <% nfl_bye.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :team %>
+    <%= f.text_field :team %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bye_week %>
+    <%= f.text_field :bye_week %>
+  </div>
+
+  <div class="field">
+    <%= f.label :display_name %>
+    <%= f.text_field :display_name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

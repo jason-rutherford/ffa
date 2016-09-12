@@ -1,0 +1,64 @@
+<div class="ui container">
+
+  <p id="notice"><%= notice %></p>
+
+  <h1 class="ui header">Nfl Weather</h1>
+
+  <div class="ui inverted divider"></div>
+
+  <button class="ui primary basic button">
+    <%= link_to "Import Current Weeks Weather", nfl_weathers_import_path, class: "ui link" %>
+  </button>
+
+  <table class="ui selectable table">
+    <thead>
+      <tr>
+        <th>Game week</th>
+        <th>Game date</th>
+        <th>Home team</th>
+        <th>Away team</th>
+        <th>Stadium</th>
+        <th>Is dome</th>
+        <th>Geo lat</th>
+        <th>Geo long</th>
+        <th>Low</th>
+        <th>High</th>
+        <th>Forcast</th>
+        <th>Wind chill</th>
+        <th>Wind speed</th>
+        <th>Dome img</th>
+        <th>Medium img</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @nfl_weathers.each do |nfl_weather| %>
+        <tr>
+          <td><%= nfl_weather.game_week %></td>
+          <td><%= nfl_weather.game_date %></td>
+          <td><%= nfl_weather.home_team %></td>
+          <td><%= nfl_weather.away_team %></td>
+          <td><%= nfl_weather.stadium %></td>
+          <td><%= nfl_weather.is_dome %></td>
+          <td><%#= nfl_weather.geo_lat %></td>
+          <td><%#= nfl_weather.geo_long %></td>
+          <td><%= nfl_weather.low %></td>
+          <td><%= nfl_weather.high %></td>
+          <td><%= nfl_weather.forcast %></td>
+          <td><%= nfl_weather.wind_chill %></td>
+          <td><%= nfl_weather.wind_speed %></td>
+          <td><%= image_tag nfl_weather.dome_img %></td>
+          <td><%= image_tag nfl_weather.medium_img %></td>
+          <td><%= link_to 'Show', nfl_weather %></td>
+          <td><%= link_to 'Edit', edit_nfl_weather_path(nfl_weather) %></td>
+          <td><%= link_to 'Destroy', nfl_weather, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Nfl Weather', new_nfl_weather_path %>
+</div>

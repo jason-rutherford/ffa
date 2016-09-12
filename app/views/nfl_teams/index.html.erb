@@ -1,0 +1,42 @@
+<div class="ui container">
+
+  <p id="notice"><%= notice %></p>
+
+  <h1 class="ui header">Nfl Teams</h1>
+
+  <div class="ui inverted divider"></div>
+
+  <button class="ui primary basic button">
+    <%= link_to "Import Teams", nfl_teams_import_path, class: "ui link" %>
+  </button>
+
+  <table class="ui selectable inverted table">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Full name</th>
+        <th>Short name</th>
+        <th>Bye Weeks</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @nfl_teams.each do |nfl_team| %>
+        <tr>
+          <td><%= nfl_team.code %></td>
+          <td><%= nfl_team.full_name %></td>
+          <td><%= nfl_team.short_name %></td>
+          <td><%= NflBye.where(team: nfl_team.code).select(:bye_week).map(&:bye_week).to_s %></td>
+          <td class="right aligned"><%= link_to 'Show', nfl_team %></td>
+          <td class="right aligned"><%= link_to 'Edit', edit_nfl_team_path(nfl_team) %></td>
+          <td class="right aligned"><%= link_to 'Destroy', nfl_team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Nfl Team', new_nfl_team_path %>
+</div>

@@ -1,0 +1,47 @@
+<%= form_for(nfl_schedule) do |f| %>
+  <% if nfl_schedule.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(nfl_schedule.errors.count, "error") %> prohibited this nfl_schedule from being saved:</h2>
+
+      <ul>
+      <% nfl_schedule.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :game_week %>
+    <%= f.text_field :game_week %>
+  </div>
+
+  <div class="field">
+    <%= f.label :game_date %>
+    <%= f.date_select :game_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :away_team %>
+    <%= f.text_field :away_team %>
+  </div>
+
+  <div class="field">
+    <%= f.label :home_team %>
+    <%= f.text_field :home_team %>
+  </div>
+
+  <div class="field">
+    <%= f.label :game_time_et %>
+    <%= f.time_select :game_time_et %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tv_station %>
+    <%= f.text_field :tv_station %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

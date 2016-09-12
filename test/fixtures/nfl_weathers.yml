@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_week: 1
+  game_date: 2016-09-11
+  home_team: MyString
+  away_team: MyString
+  stadium: MyString
+  is_dome: MyString
+  geo_lat: MyString
+  geo_long: MyString
+  low: MyString
+  high: MyString
+  forcast: MyString
+  wind_chill: MyString
+  wind_speed: MyString
+  dome_img: MyString
+  small_img: MyString
+  medium_img: MyString
+  large_img: MyString
+
+two:
+  game_week: 1
+  game_date: 2016-09-11
+  home_team: MyString
+  away_team: MyString
+  stadium: MyString
+  is_dome: MyString
+  geo_lat: MyString
+  geo_long: MyString
+  low: MyString
+  high: MyString
+  forcast: MyString
+  wind_chill: MyString
+  wind_speed: MyString
+  dome_img: MyString
+  small_img: MyString
+  medium_img: MyString
+  large_img: MyString

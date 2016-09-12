@@ -1,0 +1,2 @@
+json.extract! nfl_player, :id, :ffn_id, :active, :jersey, :lname, :fname, :display_name, :team, :postition, :height, :weight, :dob, :college, :created_at, :updated_at
+json.url nfl_player_url(nfl_player, format: :json)

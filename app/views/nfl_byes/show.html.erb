@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @nfl_bye.team %>
+</p>
+
+<p>
+  <strong>Bye week:</strong>
+  <%= @nfl_bye.bye_week %>
+</p>
+
+<p>
+  <strong>Display name:</strong>
+  <%= @nfl_bye.display_name %>
+</p>
+
+<%= link_to 'Edit', edit_nfl_bye_path(@nfl_bye) %> |
+<%= link_to 'Back', nfl_byes_path %>

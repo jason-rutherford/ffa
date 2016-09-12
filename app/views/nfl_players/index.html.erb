@@ -1,0 +1,58 @@
+<div class="ui container">
+
+  <p id="notice"><%= notice %></p>
+
+  <h1 class="ui header">Players</h1>
+
+  <div class="ui inverted divider"></div>
+
+  <button class="ui primary basic button">
+    <%= link_to "Import Players", nfl_players_import_path, class: "ui link" %>
+  </button>
+
+  <table class="ui selectable inverted table">
+    <thead>
+      <tr>
+        <th>Ffn</th>
+        <th>Active</th>
+        <th>Jersey</th>
+        <th>Lname</th>
+        <th>Fname</th>
+        <th>Display name</th>
+        <th>Team</th>
+        <th>Postition</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Dob</th>
+        <th>College</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @nfl_players.each do |nfl_player| %>
+        <tr>
+          <td><%= nfl_player.ffn_id %></td>
+          <td><%= nfl_player.active %></td>
+          <td><%= nfl_player.jersey %></td>
+          <td><%= nfl_player.lname %></td>
+          <td><%= nfl_player.fname %></td>
+          <td><%= nfl_player.display_name %></td>
+          <td><%= nfl_player.team %></td>
+          <td><%= nfl_player.postition %></td>
+          <td><%= nfl_player.height %></td>
+          <td><%= nfl_player.weight %></td>
+          <td><%= nfl_player.dob %></td>
+          <td><%= nfl_player.college %></td>
+          <td><%= link_to 'Show', nfl_player %></td>
+          <td><%= link_to 'Edit', edit_nfl_player_path(nfl_player) %></td>
+          <td><%= link_to 'Destroy', nfl_player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Nfl Player', new_nfl_player_path %>
+</div>

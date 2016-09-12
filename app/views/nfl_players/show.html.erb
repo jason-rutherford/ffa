@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ffn:</strong>
+  <%= @nfl_player.ffn_id %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @nfl_player.active %>
+</p>
+
+<p>
+  <strong>Jersey:</strong>
+  <%= @nfl_player.jersey %>
+</p>
+
+<p>
+  <strong>Lname:</strong>
+  <%= @nfl_player.lname %>
+</p>
+
+<p>
+  <strong>Fname:</strong>
+  <%= @nfl_player.fname %>
+</p>
+
+<p>
+  <strong>Display name:</strong>
+  <%= @nfl_player.display_name %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @nfl_player.team %>
+</p>
+
+<p>
+  <strong>Postition:</strong>
+  <%= @nfl_player.postition %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @nfl_player.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @nfl_player.weight %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @nfl_player.dob %>
+</p>
+
+<p>
+  <strong>College:</strong>
+  <%= @nfl_player.college %>
+</p>
+
+<%= link_to 'Edit', edit_nfl_player_path(@nfl_player) %> |
+<%= link_to 'Back', nfl_players_path %>

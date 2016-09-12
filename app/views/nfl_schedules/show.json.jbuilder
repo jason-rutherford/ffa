@@ -1,0 +1,1 @@
+json.partial! "nfl_schedules/nfl_schedule", nfl_schedule: @nfl_schedule

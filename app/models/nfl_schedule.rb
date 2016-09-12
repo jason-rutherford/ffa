@@ -1,0 +1,2 @@
+class NflSchedule < ApplicationRecord
+end

@@ -1,0 +1,77 @@
+<%= form_for(nfl_player) do |f| %>
+  <% if nfl_player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(nfl_player.errors.count, "error") %> prohibited this nfl_player from being saved:</h2>
+
+      <ul>
+      <% nfl_player.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ffn_id %>
+    <%= f.text_field :ffn_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :active %>
+    <%= f.check_box :active %>
+  </div>
+
+  <div class="field">
+    <%= f.label :jersey %>
+    <%= f.number_field :jersey %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lname %>
+    <%= f.text_field :lname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fname %>
+    <%= f.text_field :fname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :display_name %>
+    <%= f.text_field :display_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :team %>
+    <%= f.text_field :team %>
+  </div>
+
+  <div class="field">
+    <%= f.label :postition %>
+    <%= f.text_field :postition %>
+  </div>
+
+  <div class="field">
+    <%= f.label :height %>
+    <%= f.text_field :height %>
+  </div>
+
+  <div class="field">
+    <%= f.label :weight %>
+    <%= f.text_field :weight %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dob %>
+    <%= f.text_field :dob %>
+  </div>
+
+  <div class="field">
+    <%= f.label :college %>
+    <%= f.text_field :college %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

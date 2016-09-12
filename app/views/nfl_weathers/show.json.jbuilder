@@ -1,0 +1,1 @@
+json.partial! "nfl_weathers/nfl_weather", nfl_weather: @nfl_weather

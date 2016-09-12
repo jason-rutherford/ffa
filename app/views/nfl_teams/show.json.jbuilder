@@ -1,0 +1,1 @@
+json.partial! "nfl_teams/nfl_team", nfl_team: @nfl_team

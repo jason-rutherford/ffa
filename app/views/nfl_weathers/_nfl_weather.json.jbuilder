@@ -1,0 +1,2 @@
+json.extract! nfl_weather, :id, :game_week, :game_date, :home_team, :away_team, :stadium, :is_dome, :geo_lat, :geo_long, :low, :high, :forcast, :wind_chill, :wind_speed, :dome_img, :small_img, :medium_img, :large_img, :created_at, :updated_at
+json.url nfl_weather_url(nfl_weather, format: :json)

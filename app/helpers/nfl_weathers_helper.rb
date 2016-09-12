@@ -1,0 +1,2 @@
+module NflWeathersHelper
+end

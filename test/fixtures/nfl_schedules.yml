@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_week: 
+  game_date: 2016-09-11
+  away_team: MyString
+  home_team: MyString
+  game_time_et: 2016-09-11 17:04:46
+  tv_station: MyString
+
+two:
+  game_week: 
+  game_date: 2016-09-11
+  away_team: MyString
+  home_team: MyString
+  game_time_et: 2016-09-11 17:04:46
+  tv_station: MyString
