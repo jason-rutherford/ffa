@@ -4,7 +4,8 @@ class NflPlayersController < ApplicationController
   # GET /nfl_players
   # GET /nfl_players.json
   def index
-    @nfl_players = NflPlayer.all
+    @q = NflPlayer.ransack(params[:q])
+    @nfl_players = @q.result
   end
 
   # GET /nfl_players/1

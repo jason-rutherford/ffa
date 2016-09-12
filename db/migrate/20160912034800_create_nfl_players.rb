@@ -8,10 +8,10 @@ class CreateNflPlayers < ActiveRecord::Migration[5.0]
       t.string :fname
       t.string :display_name
       t.string :team
-      t.string :postition
+      t.string :position
       t.string :height
       t.string :weight
-      t.string :dob
+      t.date :dob
       t.string :college
 
       t.timestamps

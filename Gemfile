@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'fantasy_football_nerd', path: '/Users/jasonr/Projects/fantasy_football_nerd'
 gem 'awesome_print'
 gem 'semantic-ui-sass'
+gem 'ransack'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -13,6 +13,22 @@
   <table class="ui selectable table">
     <thead>
       <tr>
+        <th><%= sort_link(@q, :game_week) %></th>
+        <th><%= sort_link(@q, :game_date) %></th>
+        <th><%= sort_link(@q, :home_team) %></th>
+        <th><%= sort_link(@q, :away_team) %></th>
+        <th><%= sort_link(@q, :stadium) %></th>
+        <th><%= sort_link(@q, :is_dome) %></th>
+        <th><%= sort_link(@q, :geo_lat) %></th>
+        <th><%= sort_link(@q, :geo_long) %></th>
+        <th><%= sort_link(@q, :low) %></th>
+        <th><%= sort_link(@q, :high) %></th>
+        <th><%= sort_link(@q, :forecast) %></th>
+        <th><%= sort_link(@q, :wind_chill) %></th>
+        <th><%= sort_link(@q, :wind_speed) %></th>
+        <th><%= sort_link(@q, :dome_img) %></th>
+        <th><%= sort_link(@q, :medium_img) %></th>
+
         <th>Game week</th>
         <th>Game date</th>
         <th>Home team</th>
@@ -45,7 +61,7 @@
           <td><%#= nfl_weather.geo_long %></td>
           <td><%= nfl_weather.low %></td>
           <td><%= nfl_weather.high %></td>
-          <td><%= nfl_weather.forcast %></td>
+          <td><%= nfl_weather.forecast %></td>
           <td><%= nfl_weather.wind_chill %></td>
           <td><%= nfl_weather.wind_speed %></td>
           <td><%= image_tag nfl_weather.dome_img %></td>

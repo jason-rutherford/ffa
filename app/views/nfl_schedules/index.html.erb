@@ -13,12 +13,12 @@
   <table class="ui selectable inverted table">
     <thead>
       <tr>
-        <th>Game week</th>
-        <th>Game date</th>
-        <th>Away team</th>
-        <th>Home team</th>
-        <th>Game time et</th>
-        <th>Tv station</th>
+        <th><%= sort_link(@q, :game_week) %></th>
+        <th><%= sort_link(@q, :game_date) %></th>
+        <th><%= sort_link(@q, :away_team) %></th>
+        <th><%= sort_link(@q, :home_team) %></th>
+        <th><%= sort_link(@q, :game_time_et, "Time (ET)") %></th>
+        <th><%= sort_link(@q, :tv_station) %></th>
         <th colspan="3"></th>
       </tr>
     </thead>

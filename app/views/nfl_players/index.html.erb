@@ -13,6 +13,19 @@
   <table class="ui selectable inverted table">
     <thead>
       <tr>
+        <th><%= sort_link(@q, :ffn_id) %></th>
+        <th><%= sort_link(@q, :active) %></th>
+        <th><%= sort_link(@q, :jersey) %></th>
+        <th><%= sort_link(@q, :lname) %></th>
+        <th><%= sort_link(@q, :fname) %></th>
+        <th><%= sort_link(@q, :display_name) %></th>
+        <th><%= sort_link(@q, :team) %></th>
+        <th><%= sort_link(@q, :position) %></th>
+        <th><%= sort_link(@q, :height) %></th>
+        <th><%= sort_link(@q, :weight) %></th>
+        <th><%= sort_link(@q, :dob) %></th>
+        <th><%= sort_link(@q, :college) %></th>
+
         <th>Ffn</th>
         <th>Active</th>
         <th>Jersey</th>
@@ -39,7 +52,7 @@
           <td><%= nfl_player.fname %></td>
           <td><%= nfl_player.display_name %></td>
           <td><%= nfl_player.team %></td>
-          <td><%= nfl_player.postition %></td>
+          <td><%= nfl_player.position %></td>
           <td><%= nfl_player.height %></td>
           <td><%= nfl_player.weight %></td>
           <td><%= nfl_player.dob %></td>

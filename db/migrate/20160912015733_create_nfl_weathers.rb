@@ -11,7 +11,7 @@ class CreateNflWeathers < ActiveRecord::Migration[5.0]
       t.string :geo_long
       t.string :low
       t.string :high
-      t.string :forcast
+      t.string :forecast
       t.string :wind_chill
       t.string :wind_speed
       t.string :dome_img

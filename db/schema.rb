@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912034800) do
+ActiveRecord::Schema.define(version: 20160912045658) do
 
   create_table "nfl_byes", force: :cascade do |t|
     t.string   "team"
-    t.string   "bye_week"
+    t.integer  "bye_week"
     t.string   "display_name"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -28,10 +28,10 @@ ActiveRecord::Schema.define(version: 20160912034800) do
     t.string   "fname"
     t.string   "display_name"
     t.string   "team"
-    t.string   "postition"
+    t.string   "position"
     t.string   "height"
     t.string   "weight"
-    t.string   "dob"
+    t.date     "dob"
     t.string   "college"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 20160912034800) do
     t.string   "geo_long"
     t.string   "low"
     t.string   "high"
-    t.string   "forcast"
+    t.string   "forecast"
     t.string   "wind_chill"
     t.string   "wind_speed"
     t.string   "dome_img"
