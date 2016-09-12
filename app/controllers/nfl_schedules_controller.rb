@@ -5,7 +5,7 @@ class NflSchedulesController < ApplicationController
   # GET /nfl_schedules.json
   def index
     @q = NflSchedule.ransack(params[:q])
-    @nfl_schedules =  @q.result
+    @nfl_schedules =  @q.result.page(params[:page])
   end
 
   # GET /nfl_schedules/1

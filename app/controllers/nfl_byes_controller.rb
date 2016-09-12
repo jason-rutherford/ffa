@@ -5,7 +5,7 @@ class NflByesController < ApplicationController
   # GET /nfl_byes.json
   def index
     @q = NflBye.ransack(params[:q])
-    @nfl_byes =  @q.result
+    @nfl_byes =  @q.result.page params[:page]
   end
 
   # GET /nfl_byes/1

@@ -38,7 +38,10 @@
       <% end %>
     </tbody>
   </table>
-
+  
+  <div class='ui right floated pagination menu'>
+    <%= paginate @nfl_teams %>
+  </div>
   <br>
 
   <%= link_to 'New Nfl Team', new_nfl_team_path %>

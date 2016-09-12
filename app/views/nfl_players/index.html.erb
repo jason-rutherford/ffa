@@ -65,6 +65,11 @@
     </tbody>
   </table>
 
+  <div class='ui right floated pagination menu'>
+    <%= paginate @nfl_players %>
+  </div>
+
+
   <br>
 
   <%= link_to 'New Nfl Player', new_nfl_player_path %>
