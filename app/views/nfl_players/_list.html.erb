@@ -1,0 +1,49 @@
+<div id="players">
+  <table class="ui selectable inverted striped table">
+    <thead>
+      <tr>
+        <th><%= sort_link(@q, :ffn_id) %></th>
+        <th><%= sort_link(@q, :active) %></th>
+        <th><%= sort_link(@q, :jersey) %></th>
+        <th><%= sort_link(@q, :team) %></th>
+        <th><%= sort_link(@q, :position) %></th>
+        <th><%= sort_link(@q, :lname) %>, <%= sort_link(@q, :fname) %></th>
+        <th><%= sort_link(@q, :height) %></th>
+        <th><%= sort_link(@q, :weight) %></th>
+        <th><%= sort_link(@q, :dob) %></th>
+        <th><%= sort_link(@q, :college) %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @nfl_players.each do |nfl_player| %>
+        <tr>
+          <td><%= nfl_player.ffn_id %></td>
+          <td><%= nfl_player.active %></td>
+          <td><%= nfl_player.jersey %></td>
+          <td colspan=2>
+            <div class="ui <%= ui_label_color(nfl_player.position) %> image label">
+              <%= nfl_player.team %>
+              <div class="detail"><%= nfl_player.position %></div>
+            </div> 
+          </div>
+          </td>
+
+          <td><%= nfl_player.display_name %></td>
+          <td><%= nfl_player.height %></td>
+          <td><%= nfl_player.weight %></td>
+          <td><%= nfl_player.dob %></td>
+          <td><%= nfl_player.college %></td>
+          <td><%= link_to 'Show', nfl_player %></td>
+          <td><%= link_to 'Edit', edit_nfl_player_path(nfl_player) %></td>
+          <td><%= link_to 'Destroy', nfl_player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <div class='ui right floated pagination menu'>
+      <%= paginate @nfl_players, remote: true %>
+  </div>
+</div>

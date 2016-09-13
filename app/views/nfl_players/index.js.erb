@@ -1,0 +1,2 @@
+$('#paginator').html('<%= escape_javascript(paginate(@nfl_players, :remote => true).to_s) %>'); 
+$('#players').html('<%= escape_javascript render( partial: 'list') %>');
